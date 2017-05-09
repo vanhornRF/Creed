@@ -45,6 +45,10 @@ body {
   padding-left: 1rem;
 }
 
+.show {
+  display:inline-block !important;
+}
+
 /* Custom page header */
 .header {
   background-color:$primary-color;
@@ -63,6 +67,100 @@ body {
     #navbarToggle {
       padding:0;
       position:static;
+    }
+    .dropdown-menu {
+      width:100%;
+      background-color:rgba(34,14,61,0.9);
+      border-radius:0;
+      padding:0 6rem;
+      margin:0;
+      .dropdown-top-menu {
+        padding:1rem 2rem;
+        .category {
+          font-size:1.5rem;
+          color:$nav-font-color;
+          &.active {
+            color:#FFFFFF;
+            border-bottom:4px solid $nav-font-color;
+          }
+        }
+      }
+    }
+    .sub-menu {
+      position:relative;
+      display:inline-block;
+      .dropdown-item {
+        color:#FFFFFF;
+        background:none;
+        font-size:1.5em;
+        padding:1rem 0;
+        cursor:pointer;
+        &.active {
+          font-weight:bold;
+          background:none;
+          border-bottom:1px solid #FFFFFF;
+        }
+        i {
+          margin-right:0.5rem;
+          color:$nav-font-color;
+        }
+      }
+    }
+    .sub-sub-menu {
+      position:relative;
+      display:none;
+      margin:0.5rem 0 0 2rem;
+      vertical-align:top;
+      .dropdown-item {
+        color:#FFFFFF;
+        background:none;
+        font-size:1.25rem;
+        cursor:pointer;
+        padding:1rem 0;
+        &.active {
+          font-size:1.5rem;
+          font-weight:bold;
+          border-bottom:1px solid #FFFFFF;
+        }
+      }
+    }
+    .call-to-action {
+      display:none;
+      color:#FFFFFF;
+      width:30%;
+      vertical-align:top;
+      margin: 3rem 0 3rem 3rem;
+      background:rgba(34, 14, 61, 1);
+      padding:1rem;
+      h1 {
+        font-size:2.75rem;
+        font-family: $nav-font-family;
+        font-weight:bold;
+        max-width:25rem;
+      }
+      p {
+        font-size:0.75rem;
+        border-bottom: 1px solid grey;
+        padding-bottom:0.5rem;
+      }
+      h3 {
+        font-size:1.25rem;
+        color: gray;
+      }
+      p.larger {
+        font-size:1.125rem;
+        border:none;
+      }
+      .btn-yellow {
+        color: #fff;
+        background-color: $nav-font-color;
+        border-color: $nav-font-color;
+        font-family: $nav-font-family;
+        font-weight:Enriqueta-Bold;
+        cursor:pointer;
+        width:100%;
+        margin-top:1rem;
+      }
     }
   }
   .logo {
@@ -112,42 +210,11 @@ body {
           color:$nav-font-color;
         }
       }
-      .dropdown-menu {
-        width:100%;
-        background-color:rgba(34,14,61,0.9);
-        border-radius:0;
-        padding:0 6rem;
-        margin:0;
-        .dropdown-top-menu {
-          .category {
-            font-size:1.5rem;
-            color:$nav-font-color;
-            &.active {
-              color:#FFFFFF;
-              border-bottom:4px solid $nav-font-color;
-            }
-          }
-        }
-      }
+      
       &.active {
         background-color:#2a1547;
       }
-      .sub-menu {
-        .dropdown-item {
-          color:#FFFFFF;
-          background:none;
-          font-size:1.5em;
-          &.active {
-            font-weight:bold;
-            background:none;
-            border-bottom:1px solid #FFFFFF;
-          }
-          i {
-            margin-right:0.5rem;
-            color:$nav-font-color;
-          }
-        }
-      }
+
     }
   }
 }
