@@ -99,7 +99,7 @@ body {
     color:$nav-font-color;
     font-size:1.5rem;
     position:static;
-    li {
+    li.nav-item {
       height:5.4375rem;
       line-height:5.4375rem;
       cursor:pointer;
@@ -114,6 +114,39 @@ body {
       }
       .dropdown-menu {
         width:100%;
+        background-color:rgba(34,14,61,0.9);
+        border-radius:0;
+        padding:0 6rem;
+        margin:0;
+        .dropdown-top-menu {
+          .category {
+            font-size:1.5rem;
+            color:$nav-font-color;
+            &.active {
+              color:#FFFFFF;
+              border-bottom:4px solid $nav-font-color;
+            }
+          }
+        }
+      }
+      &.active {
+        background-color:#2a1547;
+      }
+      .sub-menu {
+        .dropdown-item {
+          color:#FFFFFF;
+          background:none;
+          font-size:1.5em;
+          &.active {
+            font-weight:bold;
+            background:none;
+            border-bottom:1px solid #FFFFFF;
+          }
+          i {
+            margin-right:0.5rem;
+            color:$nav-font-color;
+          }
+        }
       }
     }
   }
